@@ -26,7 +26,7 @@ const app = express(); //Starting express app
 app.use(bodyParser.json()) //helps parsing json
 app.use(cors())
 
-//Home 
+//Home Route
 app.get('/', (req,res) => {
     res.send(database.users);
 })
