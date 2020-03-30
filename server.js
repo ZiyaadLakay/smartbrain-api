@@ -26,7 +26,7 @@ const app = express(); //Starting express app
 app.use(bodyParser.json()) //helps parsing json
 app.use(cors())
 
-//Home Route
+//Home Route  
 app.get('/', (req,res) => {
     res.send(database.users);
 })
@@ -46,6 +46,6 @@ app.post('/imageurl', (req,res) => {image.handleApiCall(req,res)})
 
 
 //Listening on port 
-app.listen(8000, () => {
-    console.log('app is running on port 8000')
+app.listen(process.env.PORT || 8000, () => {
+    console.log('app is running on port ${process.env.PORT}')
 })
