@@ -28,7 +28,7 @@ app.use(cors())
 
 //Home Route  
 app.get('/', (req,res) => {
-    res.send(database.users);
+    res.send("Server is up and running !");
 })
 
 //Sign In Function
