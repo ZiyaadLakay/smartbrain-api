@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines":{"10.18.1"},
+  "engines":{"node":"10.18.1"},
   "scripts": {
     "start": "nodemon server.js"
   },
