@@ -17,6 +17,8 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
+    "express":"*",
+    "body-parser":"*",
     "bcrypt": "^4.0.1",
     "clarifai": "^2.9.1",
     "knex": "^0.20.13",
