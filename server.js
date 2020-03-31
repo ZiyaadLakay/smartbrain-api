@@ -11,10 +11,8 @@ const image = require('./contollers/image')
 const db = require('knex')({
     client: 'pg',
     connection: {
-        host : 'postgresql-silhouetted-62665',
-        user : 'postgres',
-        password : '',
-        database : 'smartbrainDB'
+        connectionString: process.env.DATABASE_URL,
+  		ssl: true,
   }
 });
 
