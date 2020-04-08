@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines":{"node":"10.18.1"},
+  "engines": {
+    "node": "10.18.1"
+  },
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon server.js"
@@ -17,13 +19,13 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "express":"*",
-    "body-parser":"*",
     "bcrypt": "^4.0.1",
+    "body-parser": "*",
     "clarifai": "^2.9.1",
+    "cors": "^2.8.5",
+    "express": "*",
     "knex": "^0.20.13",
     "mysql": "^2.18.1",
-    "pg": "^7.18.2",
-    "cors": "^2.8.5"
+    "pg": "^7.18.2"
   }
 }

@@ -6,7 +6,7 @@ const cors = require('cors')
 const register = require('./contollers/register')
 const signin = require('./contollers/signin')
 const profile = require('./contollers/profile')
-const image = require('./contollers/image')
+const image = require('./contollers/imageFace')
 
 const db = require('knex')({
     client: 'pg',
@@ -39,8 +39,8 @@ app.post('/register', (req,res) => {register.handleRegister(req,res,db,bcrypt)})
 app.get('/profile/:id',(req,res) => {profile.handleProfile(req,res,db)})
 
 //Image counter funtion
-app.put('/image', (req,res) => {image.handleImage(req,res,db)})
-app.post('/imageurl', (req,res) => {image.handleApiCall(req,res)})
+app.put('/image', (req,res) => {image.handleImage(req,res,db)}) //Updating Entreies in Database
+app.post('/imageurl', (req,res) => {image.handleApiCall(req,res)}) //Sending data to API and responding with output
 
 
 //Listening on port 
